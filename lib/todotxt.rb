@@ -13,3 +13,9 @@ end
 
 require "todotxt/regex"
 require "todotxt/version"
+
+module Todotxt
+  # Load and run RC file
+  RC_PATH = File.expand_path("~/.todotxt.rb")
+  load RC_PATH if File.exist?(RC_PATH)
+end
